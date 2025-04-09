@@ -23,13 +23,6 @@ List<String> basicSearch({
 }) {
   final invalidCharactersRegex = RegExp(r"[' 2\s]");
 
-  /// get key from algorithm
-  /// will return key from last algorithm
-  ///
-  String getLastMoveKey(String algorithm) {
-    return algorithm.replaceAll(invalidCharactersRegex, '').split('').last;
-  }
-
   final solutions = <String>[];
 
   // step 1. -> validate move definitions
@@ -71,12 +64,6 @@ List<String> basicSearch({
     }
   }
 
-  /// helper function to get new copy of state
-  List<List<int>> getNewState() {
-    return List<List<int>>.generate(
-        originalState.length, (i) => List<int>.generate(originalState[i].length, (j) => originalState[i][j]));
-  }
-
   var depth = 0;
   List<String> algorithms = [];
   while (depth < maxDepth) {
@@ -90,7 +77,7 @@ List<String> basicSearch({
         for (int j = 0; j < 3; j++) {
           final algorithm = readableOptionValue(key, j);
           final permutation = moveDefinitionOptionMap[key]![j];
-          final state = permutationAlgorithm(getNewState(), permutation);
+          final state = permutationAlgorithm(originalState, permutation);
 
           if (stateValidator(state)) {
             newSolutions.add(algorithm);
@@ -103,14 +90,16 @@ List<String> basicSearch({
       List<String> newAlgorithms = [];
       for (var i = 0; i < algorithms.length; i++) {
         var algorithm = algorithms[i];
-        final possibleMoveOptionsList = possibleMoveOptions(getLastMoveKey(algorithm), moveDefinitionKeys);
+        final key = algorithm.replaceAll(invalidCharactersRegex, '').split('').last;
+        final possibleMoveOptionsList = possibleMoveOptions(key, moveDefinitionKeys);
         for (var j = 0; j < possibleMoveOptionsList.length; j++) {
           final key = possibleMoveOptionsList[j];
           for (int k = 0; k < 3; k++) {
             final finalAlgorithm = algorithm + readableOptionValue(key, k);
             final finalAlgorithmList = finalAlgorithm.split(' ').where((e) => e.isNotEmpty);
 
-            var state = getNewState();
+            var state = List<List<int>>.generate(
+                originalState.length, (i) => List<int>.generate(originalState[i].length, (j) => originalState[i][j]));
             for (final alg in finalAlgorithmList) {
               final permutation = parseOptionValue(alg, moveDefinitionOptionMap);
               state = permutationAlgorithm(state, permutation);
