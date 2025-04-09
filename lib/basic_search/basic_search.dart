@@ -3,6 +3,8 @@ import 'package:state_solver_dart/move_options/move_options.dart';
 import 'package:state_solver_dart/permutation_algorithm/permutation_algorithm.dart';
 import 'package:state_solver_dart/permutation_reflection/permutation_reflection.dart';
 
+import '../possible_move_options/possible_move_options.dart';
+
 /// response is list of algorithms found
 List<String> basicSearch({
   /// map of moves, string is key of the move used int the response
@@ -17,13 +19,6 @@ List<String> basicSearch({
   /// Max length of solution
   required int maxDepth,
 }) {
-  // get possible move options
-  // helper function that returns list of options that can be chosen
-  // returns list of keys without selected key
-  List<String> possibleMoveOptions(String key, List<String> keys) {
-    return List<String>.from(keys.where((e) => e != key));
-  }
-
   final invalidCharactersRegex = RegExp(r"[' 2\s]");
 
   /// get key from algorithm
