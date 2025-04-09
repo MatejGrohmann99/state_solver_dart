@@ -1,7 +1,5 @@
 import 'package:state_solver_dart/permutation_addition/permutation_addition.dart';
 import 'package:test/test.dart';
-import 'package:state_solver_dart/permutation_algorithm/permutation_algorithm.dart';
-import 'package:state_solver_dart/permutation_reflection/permutation_reflection.dart';
 
 void main() {
   group('permutationAddition', () {
