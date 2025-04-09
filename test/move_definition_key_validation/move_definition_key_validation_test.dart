@@ -50,7 +50,14 @@ void main() {
       ];
 
       final validation = moveDefinitionKeyValidation(moveDefinitions);
-      expect(validation, isFalse);
+      expect(validation, isTrue);
+    });
+
+    test('Subtract', () {
+      final keysRegex = RegExp(r"[^'\s](?=[^'\s]*$)");
+      final string = 'L\' U2 L U R R U2\'';
+      final matcher = keysRegex.firstMatch(string)?.group(1);
+      print(matcher);
     });
   });
 }

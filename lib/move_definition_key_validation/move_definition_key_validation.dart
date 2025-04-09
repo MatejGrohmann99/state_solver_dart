@@ -29,7 +29,7 @@ bool moveDefinitionKeyValidation(List<String> keys) {
   // verify that keys does not contain characters ', 2 and spaces
   final keysRegex = RegExp(r"[' 2\s]");
   for (var i = 0; i < keys.length; i++) {
-    if (!keysRegex.hasMatch(keys[i])) {
+    if (keysRegex.hasMatch(keys[i])) {
       return false;
     }
   }
