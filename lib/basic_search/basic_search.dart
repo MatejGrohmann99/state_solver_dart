@@ -3,6 +3,7 @@ import 'package:state_solver_dart/move_options/move_options.dart';
 import 'package:state_solver_dart/permutation_algorithm/permutation_algorithm.dart';
 import 'package:state_solver_dart/permutation_reflection/permutation_reflection.dart';
 
+import '../parse_option_value/parse_option_value.dart';
 import '../possible_move_options/possible_move_options.dart';
 import '../readable_option_value/readable_option_value.dart';
 
@@ -27,23 +28,6 @@ List<String> basicSearch({
   ///
   String getLastMoveKey(String algorithm) {
     return algorithm.replaceAll(invalidCharactersRegex, '').split('').last;
-  }
-
-  List<List<int>> parseOptionValue(String value, Map<String, List<List<List<int>>>> map) {
-    final valueList = value.split('');
-    if (valueList.length == 1) {
-      return map[value]![0];
-    } else {
-      final key = valueList.first;
-      final lastChar = valueList.last;
-      if (lastChar == '2') {
-        return map[key]![1];
-      }
-      if (lastChar == '\'') {
-        return map[key]![2];
-      }
-    }
-    throw Exception('Error parsing option value $value');
   }
 
   final solutions = <String>[];
