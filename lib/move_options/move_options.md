@@ -1,11 +1,11 @@
-# getMoveOptions
+# moveOptions
 
 Generates a list of move options based on a given clockwise move definition.
 
 ## Function Signature
 
 ```dart
- List<List<List<int>>> getMoveOptions(List<List<int>> moveDefinition);
+ List<List<List<int>>> moveOptions(List<List<int>> moveDefinition);
  ```
 
 ## Parameters
@@ -48,7 +48,7 @@ It ensures the provided move definition is valid using `moveValidation` before g
   [04, 05, 06, 07, 00, 01, 02, 03, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
   ];
  
-  final moveOptions = getMoveOptions(uClockwisePermutation);
+  final moveOptions = moveOptions(uClockwisePermutation);
   print(moveOptions);
   // Output: [
   //   uClockwisePermutation,

@@ -32,7 +32,7 @@ import '../permutation_addition/permutation_addition.dart';
 ///   [04, 05, 06, 07, 00, 01, 02, 03, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
 /// ];
 ///
-/// final moveOptions = getMoveOptions(uClockwisePermutation);
+/// final moveOptions = moveOptions(uClockwisePermutation);
 /// print(moveOptions);
 /// // Output: [
 /// //   uClockwisePermutation,
@@ -58,7 +58,7 @@ import '../permutation_addition/permutation_addition.dart';
 ///   2. `permutationAddition(orderedPermutations: [moveDefinition])`: Generates the clockwise move (same as input).
 ///   3. `permutationAddition(orderedPermutations: [moveDefinition, moveDefinition])`: Generates the double move.
 ///   4. `permutationAddition(orderedPermutations: [moveDefinition, moveDefinition, moveDefinition])`: Generates the counter-clockwise move.
-List<List<List<int>>> getMoveOptions(List<List<int>> moveDefinition) {
+List<List<List<int>>> moveOptions(List<List<int>> moveDefinition) {
   final validation = moveValidation(moveDefinition);
   if (!validation) throw Exception('provided move definition is not valid move!');
 

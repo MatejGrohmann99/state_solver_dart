@@ -2,23 +2,23 @@ import 'package:test/test.dart';
 import 'package:state_solver_dart/move_options/move_options.dart';
 
 void main() {
-  group('getMoveOptions Tests', () {
+  group('moveOptions Tests', () {
     test('U Permutation Options', () {
-      final options = getMoveOptions(uClockwisePermutation);
+      final options = moveOptions(uClockwisePermutation);
       expect(options[0], equals(uClockwisePermutation));
       expect(options[1], equals(uDoublePermutation));
       expect(options[2], equals(uCounterClockwisePermutation));
     });
 
     test('F Permutation Options', () {
-      final options = getMoveOptions(fClockwisePermutation);
+      final options = moveOptions(fClockwisePermutation);
       expect(options[0], equals(fClockwisePermutation));
       expect(options[1], equals(fDoublePermutation));
       expect(options[2], equals(fCounterClockwisePermutation));
     });
 
     test('R Permutation Options', () {
-      final options = getMoveOptions(rClockwisePermutation);
+      final options = moveOptions(rClockwisePermutation);
       expect(options[0], equals(rClockwisePermutation));
       expect(options[1], equals(rDoublePermutation));
       expect(options[2], equals(rCounterClockwisePermutation));
@@ -28,7 +28,7 @@ void main() {
       final invalidMove = [
         [1, 2, 0, -1],
       ];
-      expect(() => getMoveOptions(invalidMove), throwsA(isA<Exception>()));
+      expect(() => moveOptions(invalidMove), throwsA(isA<Exception>()));
     });
   });
 }
