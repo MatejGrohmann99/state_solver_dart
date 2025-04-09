@@ -4,6 +4,7 @@ import 'package:state_solver_dart/permutation_algorithm/permutation_algorithm.da
 import 'package:state_solver_dart/permutation_reflection/permutation_reflection.dart';
 
 import '../possible_move_options/possible_move_options.dart';
+import '../readable_option_value/readable_option_value.dart';
 
 /// response is list of algorithms found
 List<String> basicSearch({
@@ -26,18 +27,6 @@ List<String> basicSearch({
   ///
   String getLastMoveKey(String algorithm) {
     return algorithm.replaceAll(invalidCharactersRegex, '').split('').last;
-  }
-
-  /// helper function to get String value of key within specific index
-  ///
-  String readableOptionValue(String key, int index) {
-    final end = switch (index) {
-      0 => '',
-      1 => '2',
-      2 => '\'',
-      _ => throw Exception('Invalid index out of range when trying to create readable option'),
-    };
-    return ' $key$end';
   }
 
   List<List<int>> parseOptionValue(String value, Map<String, List<List<List<int>>>> map) {
