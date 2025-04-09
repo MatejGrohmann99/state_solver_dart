@@ -1,7 +1,6 @@
 import 'package:state_solver_dart/permutation_algorithm/permutation_algorithm.dart';
 import 'package:test/test.dart';
 
-
 void main() {
   group('permutationAlgorithm', () {
     test('Basic permutation', () {

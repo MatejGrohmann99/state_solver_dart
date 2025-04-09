@@ -6,27 +6,24 @@ import 'package:state_solver_dart/permutation_reflection/permutation_reflection.
 void main() {
   group('permutationAddition', () {
     test('Basic permutation addition', () {
-       final orderedPermutations = [
-         [
-           [-1, 2, 1],
-           [-1, 2, 1]
-         ],
-         [
-           [-1, 2, 1],
-           [1, 0, -1]
-         ]
-       ];
+      final orderedPermutations = [
+        [
+          [-1, 2, 1],
+          [-1, 2, 1]
+        ],
+        [
+          [-1, 2, 1],
+          [1, 0, -1]
+        ]
+      ];
 
       final result = permutationAddition(orderedPermutations: orderedPermutations);
 
-      expect(result,
-[
-  [-1, -1, -1],
-  [2, 0, 1]
-]
-      );
+      expect(result, [
+        [-1, -1, -1],
+        [2, 0, 1]
+      ]);
     });
-
 
     test('Handles single permutation matrix', () {
       final orderedPermutations = [
@@ -44,7 +41,7 @@ void main() {
     test('Multiple permutations applied sequentially', () {
       final orderedPermutations = [
         [
-          [1, 2, 0 ],
+          [1, 2, 0],
           [-1, 2, 1]
         ],
         [
