@@ -1,6 +1,5 @@
-import 'package:state_solver_dart/move_validation/move_validation.dart';
-
-import '../permutation_addition/permutation_addition.dart';
+import 'package:state_solver_dart/basic_search/move_validation/move_validation.dart';
+import 'package:state_solver_dart/basic_search/permutation_addition/permutation_addition.dart';
 
 ///
 /// Generates a list of move options based on a given clockwise move definition.

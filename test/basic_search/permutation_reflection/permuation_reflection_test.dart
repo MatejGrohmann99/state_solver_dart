@@ -1,4 +1,4 @@
-import 'package:state_solver_dart/permutation_reflection/permutation_reflection.dart';
+import 'package:state_solver_dart/basic_search/permutation_reflection/permutation_reflection.dart';
 import 'package:test/test.dart';
 
 void main() {

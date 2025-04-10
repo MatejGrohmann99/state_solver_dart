@@ -1,5 +1,5 @@
 import 'package:test/test.dart';
-import 'package:state_solver_dart/move_options/move_options.dart';
+import 'package:state_solver_dart/basic_search/move_options/move_options.dart';
 
 void main() {
   group('moveOptions Tests', () {

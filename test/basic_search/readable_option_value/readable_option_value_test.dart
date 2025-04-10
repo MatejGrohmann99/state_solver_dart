@@ -1,4 +1,4 @@
-import 'package:state_solver_dart/readable_option_value/readable_option_value.dart';
+import 'package:state_solver_dart/basic_search/readable_option_value/readable_option_value.dart';
 import 'package:test/test.dart';
 
 void main() {

@@ -15,7 +15,7 @@ const fMove = [
   [-1, -1, 05, 06, -1, 20, 21, -1, 11, 08, 09, 10, 03, -1, -1, 02, -1, -1, -1, -1, 15, 12, -1, -1],
 ];
 
-void main() {
+void main() async {
   final startTime = DateTime.now();
   final movesMap = {
     "R": rMove,
@@ -30,11 +30,11 @@ void main() {
     return true;
   }
 
-  final results = basicSearch(
+  await basicSearch(
     moveDefinitions: movesMap,
     stateValidator: isStateSolveValidation,
-    maxDepth: 10,
-    scramble: "R U R' U' R' F R F'",
+    maxDepth: 12,
+    scramble: "R U R' F' R U R' U' R' F R2 U' R'",
   );
 
   print('finished in ${DateTime.now().difference(startTime)}');

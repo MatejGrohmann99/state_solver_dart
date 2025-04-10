@@ -1,4 +1,4 @@
-import 'package:state_solver_dart/move_validation/move_validation.dart';
+import 'package:state_solver_dart/basic_search/move_validation/move_validation.dart';
 import 'package:test/test.dart';
 
 void main() {

@@ -1,5 +1,6 @@
-import 'package:state_solver_dart/permutation_algorithm/permutation_algorithm.dart';
-import 'package:state_solver_dart/permutation_reflection/permutation_reflection.dart';
+
+import 'package:state_solver_dart/basic_search/permutation_algorithm/permutation_algorithm.dart';
+import 'package:state_solver_dart/basic_search/permutation_reflection/permutation_reflection.dart';
 
 /// Applies a sequence of permutations to an initial reflected state and returns
 /// a resolved permutation matrix indicating changes.

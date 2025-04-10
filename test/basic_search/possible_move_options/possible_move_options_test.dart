@@ -1,4 +1,4 @@
-import 'package:state_solver_dart/possible_move_options/possible_move_options.dart';
+import 'package:state_solver_dart/basic_search/possible_move_options/possible_move_options.dart';
 import 'package:test/test.dart';
 
 void main() {

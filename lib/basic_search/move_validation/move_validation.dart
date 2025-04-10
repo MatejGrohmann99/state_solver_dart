@@ -1,8 +1,8 @@
-import 'package:state_solver_dart/permutation_addition/permutation_addition.dart';
-import 'package:state_solver_dart/permutation_algorithm/permutation_algorithm.dart';
-import 'package:state_solver_dart/permutation_reflection/permutation_reflection.dart';
 
-///
+import 'package:state_solver_dart/basic_search/permutation_addition/permutation_addition.dart';
+import 'package:state_solver_dart/basic_search/permutation_algorithm/permutation_algorithm.dart';
+import 'package:state_solver_dart/basic_search/permutation_reflection/permutation_reflection.dart';
+
 /// Every move on a 6-sided cube should return the cube back to its solved state after 4 tries.
 /// Every move combined 4 times should resolve into a no permutation state (identity permutation).
 ///

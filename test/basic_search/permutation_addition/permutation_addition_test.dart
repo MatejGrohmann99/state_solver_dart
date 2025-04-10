@@ -1,4 +1,4 @@
-import 'package:state_solver_dart/permutation_addition/permutation_addition.dart';
+import 'package:state_solver_dart/basic_search/permutation_addition/permutation_addition.dart';
 import 'package:test/test.dart';
 
 void main() {

@@ -1,4 +1,4 @@
-import 'package:state_solver_dart/parse_option_value/parse_option_value.dart';
+import 'package:state_solver_dart/basic_search/parse_option_value/parse_option_value.dart';
 import 'package:test/test.dart';
 
 void main() {
