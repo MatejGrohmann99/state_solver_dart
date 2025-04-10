@@ -1,12 +1,10 @@
-import 'package:state_solver_dart/move_definition_key_validation/move_definition_key_validation.dart';
-import 'package:state_solver_dart/move_options/move_options.dart';
-import 'package:state_solver_dart/permutation_algorithm/permutation_algorithm.dart';
-import 'package:state_solver_dart/permutation_reflection/permutation_reflection.dart';
-
-import '../parse_option_value/parse_option_value.dart';
-import '../possible_move_options/possible_move_options.dart';
-import '../readable_option_value/readable_option_value.dart';
-
+import 'package:state_solver_dart/basic_search/move_definition_key_validation/move_definition_key_validation.dart';
+import 'package:state_solver_dart/basic_search/move_options/move_options.dart';
+import 'package:state_solver_dart/basic_search/parse_option_value/parse_option_value.dart';
+import 'package:state_solver_dart/basic_search/permutation_algorithm/permutation_algorithm.dart';
+import 'package:state_solver_dart/basic_search/permutation_reflection/permutation_reflection.dart';
+import 'package:state_solver_dart/basic_search/possible_move_options/possible_move_options.dart';
+import 'package:state_solver_dart/basic_search/readable_option_value/readable_option_value.dart';
 /// Performs a basic search algorithm to find solutions for a given state, based on provided move definitions.
 ///
 /// This function explores possible move sequences up to a specified maximum depth
