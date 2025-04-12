@@ -1,4 +1,6 @@
 import 'package:state_solver_dart/basic_search/basic_search.dart';
+import 'package:state_solver_dart/basic_search/basic_search_v2.dart';
+import 'package:state_solver_dart/basic_search/basic_search_v3.dart';
 
 const uMove = [
 // 00, 01, 02, 03, 04, 05, 06, 07, 08, 09, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23
@@ -30,11 +32,25 @@ void main() async {
     return true;
   }
 
-  await basicSearch(
+  // await basicSearch(
+  //   moveDefinitions: movesMap,
+  //   stateValidator: isStateSolveValidation,
+  //   maxDepth: 9,
+  //   scramble: "R U R' U' R' F R F'",
+  // );
+
+  // await basicSearchV2(
+  //   moveDefinitions: movesMap,
+  //   stateValidator: isStateSolveValidation,
+  //   maxDepth: 9,
+  //   scramble: "R U R' U' R' F R F'",
+  // );
+
+  await basicSearchV3(
     moveDefinitions: movesMap,
-    stateValidator: isStateSolveValidation,
+    stateValidatorDefinition: isStateSolveValidation,
     maxDepth: 12,
-    scramble: "R U R' F' R U R' U' R' F R2 U' R'",
+    scramble: "R U R' U' R' F R F'",
   );
 
   print('finished in ${DateTime.now().difference(startTime)}');
